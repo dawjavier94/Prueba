@@ -17,14 +17,13 @@ public class Main {
 
     private static void operativa_coches(Coche Coche1, int cantidad) {
         int stockActual;
-        try
-        {
-            System.out.println("Venta de Coches");
-            Coche1.vender(300);
-        } catch (Exception e)
-        {
-            System.out.print("Fallo al vender");
-        }
+        ventaCoche(Coche1);
+        compraCoche(Coche1);
+        stockActual = Coche1.obtenerStock();
+        System.out.println("El stock actual es"+ stockActual );
+    }
+
+    private static void compraCoche(Coche Coche1) {
         try
         {
             System.out.println("Compra de Coches");
@@ -33,8 +32,17 @@ public class Main {
         {
             System.out.print("Fallo al ingresar");
         }
-        stockActual = Coche1.obtenerStock();
-        System.out.println("El stock actual es"+ stockActual );
+    }
+
+    private static void ventaCoche(Coche Coche1) {
+        try
+        {
+            System.out.println("Venta de Coches");
+            Coche1.vender(300);
+        } catch (Exception e)
+        {
+            System.out.print("Fallo al vender");
+        }
     }
 
 }
