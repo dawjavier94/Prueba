@@ -1,9 +1,8 @@
 
 package coche_javier;
-
 /**
  *
- * @author Fran
+ * @author Javier
  */
 public class Coche {
 
